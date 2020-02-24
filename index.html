@@ -32,33 +32,33 @@ It's not reliable because it's based on Google searched symptons and made by an 
 
 
 <script>
-	// Add each variable for the sympton.
+	// Add each variable for the sympton. In this case for vertifo or a stroke
         var stroke_count = 0;
         var vertigo_count = 0;
 
-	// This function adds a value of 1 to the allergy value everytime they hit an allergy sympton.
+	// This function adds a value of 1 to the stroke value everytime they hit an stroke sympton.
         function strokeAdd(){
             stroke_count = stroke_count + 1;
 		
 
         }
 	
-	// This function adds a value of 1 to the cold value everytime they hit a cold sympton.
+	// This function adds a value of 1 to the vertigo value everytime they hit a vertigo sympton.
         function vertigoAdd(){
             vertigo_count = vertigo_count + 1;	
 	}
 	
-	/* This function produces the percent chance of having an allergy or cold.
+	/* This function produces the percent chance of have vertifo or a a stroke.
 	var.resultText outputs that result on the results page. */
 	function results(){
 		var total= stroke_count + vertigo_count;
 		alert( "Stroke Percentage: " + (stroke_count / total) * 100 +
 		      "\Vertigo Percentage:" + (vertigo_count / total) * 100);
-	/* Put function for results() to calculate. var is variable in which I put the total allergy
-	and cold count. I choose to put an alert to calulate my results. The titles of the alert is Allergy
-	Percentage and Cold Percentage which is the allergy count and cold count over the total number of 
+	/* Put function for results() to calculate. var is variable in which I put the total vertigo
+	and stroke. I choose to put an alert to calulate my results. The titles of the alert is Stroke
+	Percentage and Vertigo Percentage which is the allergy count and cold count over the total number of 
 	questions. Mutilply each fraction by 100 to get an accurate percentage of whether the viewer has 
-	a cold or allergy */
+	a stroke or vertigo*/
 		
 	
 	}
@@ -91,7 +91,7 @@ It's not reliable because it's based on Google searched symptons and made by an 
 img, object{
     max-height:80%;
     max-width:80%;
-/*This says the actual photo cannot go beyond 80% of the screen space*/
+/*This says any photo used the actual photo cannot go beyond 80% of the screen space*/
 }
 	
 </style>
@@ -102,15 +102,17 @@ img, object{
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	<p>Are you feeling like you might have vertigo but wonder if it is a stroke. Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
 
-	<center><img src="https://eastsidesportsrehab.com/wp-content/uploads/2019/04/dizziness-vertigo-0410-1280x500.jpg"/></center>
 	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+	
+	<center><img src="https://eastsidesportsrehab.com/wp-content/uploads/2019/04/dizziness-vertigo-0410-1280x500.jpg"/></center>
+	
 <!-- This is the content for each page adding the diagnostic-->
 <div class="page" id="one">
 	<!-- This is the header on the top of the website-->
@@ -121,12 +123,12 @@ img, object{
 	<!-- This is a divider between each set of words-->
 	
     	<div id="content" class="w3-container">
-        <p>Are your eyes watery or itchy?.</p> 
+        <p>Do you feel a sudden numbness?.</p> 
 	<!-- Yes or No button that it added to the total count for both the allergy and cold. 
 	The href statement says to go to the next id which is two. If they click Yes it will
 	go to allergy add"-->
-	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	<a href="#two"  onclick="strokeAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#two"  onclick="vertigoAdd();" class="w3-btn w3-black">No</a>
 	</div>
 
 </div>
@@ -141,8 +143,8 @@ img, object{
 	<p>Do you have a fever?.</p>
 	<!-- For the href statement make sure to put which page you want next. If they say yes
 	then the answer will be added to the coldAdd counter-->
-	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
-	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+	<a href="#three"  onclick="strokeAdd();" class="w3-btn w3-black">Yes</a>
+	<a href="#three"  onclick="vertigoAdd();" class="w3-btn w3-black">No</a>
 	</div>
 	
 </div>	
@@ -154,8 +156,8 @@ img, object{
 	
 	<div id="content" class="w3-container">
 	<p>Do you have a sore throat?.</p>
-	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
-	<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+	<a href="#four"  onclick="vertigoAdd();" class="w3-btn w3-black"> Yes</a>
+	<a href="#four"  onclick="strokeAdd();" class="w3-btn w3-black">No</a>
 	</div>
 	
 </div>
