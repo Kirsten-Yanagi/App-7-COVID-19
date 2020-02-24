@@ -33,27 +33,27 @@ It's not reliable because it's based on Google searched symptons and made by an 
 
 <script>
 	// Add each variable for the sympton.
-        var allergy_count = 0;
-        var cold_count = 0;
+        var stroke_count = 0;
+        var vertigo_count = 0;
 
 	// This function adds a value of 1 to the allergy value everytime they hit an allergy sympton.
-        function allergyAdd(){
-            allergy_count = allergy_count + 1;
+        function strokeAdd(){
+            stroke_count = stroke_count + 1;
 		
 
         }
 	
 	// This function adds a value of 1 to the cold value everytime they hit a cold sympton.
-        function coldAdd(){
-            cold_count = cold_count + 1;	
+        function vertigoAdd(){
+            vertigo_count = vertigo_count + 1;	
 	}
 	
 	/* This function produces the percent chance of having an allergy or cold.
 	var.resultText outputs that result on the results page. */
 	function results(){
-		var total= allergy_count + cold_count;
-		alert( "Allergy Percentage: " + (allergy_count / total) * 100 +
-		      "\ Cold Percentage:" + (cold_count / total) * 100);
+		var total= stroke_count + vertigo_count;
+		alert( "Stroke Percentage: " + (stroke_count / total) * 100 +
+		      "\Vertigo Percentage:" + (vertigo_count / total) * 100);
 	/* Put function for results() to calculate. var is variable in which I put the total allergy
 	and cold count. I choose to put an alert to calulate my results. The titles of the alert is Allergy
 	Percentage and Cold Percentage which is the allergy count and cold count over the total number of 
