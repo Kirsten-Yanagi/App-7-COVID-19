@@ -32,33 +32,33 @@ It's not reliable because it's based on Google searched symptons and made by an 
 
 
 <script>
-	// Add each variable for the sympton. In this case for vertifo or a stroke
-        var stroke_count = 0;
-        var vertigo_count = 0;
+	// Add each variable for the sympton. In this case for COVID-19 or the flu to keep count of each sympton
+        var COVID_count = 0;
+        var flu_count = 0;
 
-	// This function adds a value of 1 to the stroke value everytime they hit an stroke sympton.
-        function strokeAdd(){
-            stroke_count = stroke_count + 1;
+	// This function adds a value of 1 to the COVID value everytime they hit an COVID sympton.
+        function COVIDAdd(){
+            COVID_count = COVID_count + 1;
 		
 
         }
 	
-	// This function adds a value of 1 to the vertigo value everytime they hit a vertigo sympton.
-        function vertigoAdd(){
-            vertigo_count = vertigo_count + 1;	
+	// This function adds a value of 1 to the flu value everytime they hit a flu sympton.
+        function fluAdd(){
+            flu_count = flu_count + 1;	
 	}
 	
-	/* This function produces the percent chance of have vertifo or a a stroke.
+	/* This function produces the percent chance of have COVID-19 or the flu.
 	var.resultText outputs that result on the results page. */
 	function results(){
-		var total= stroke_count + vertigo_count;
-		alert( "Stroke Percentage: " + (stroke_count / total) * 100 +
-		      "Vertigo Percentage:" + (vertigo_count / total) * 100);
-	/* Put function for results() to calculate. var is variable in which I put the total vertigo
-	and stroke. I choose to put an alert to calulate my results. The titles of the alert is Stroke
-	Percentage and Vertigo Percentage which is the vertigo count and stroke count over the total number of 
+		var total= COVID_count + flu_count;
+		alert( "COVID-19 Percentage: " + (COVID_count / total) * 100 +
+		      "Flu Percentage:" + (flu_count / total) * 100);
+	/* Put function for results() to calculate. var is variable in which I put the total COVID-19
+	and flu. I choose to put an alert to calulate my results. The titles of the alert is COVID-19
+	Percentage and Flu Percentage which is the COVID count and flu count over the total number of 
 	questions. Mutilply each fraction by 100 to get an accurate percentage of whether the viewer has 
-	a stroke or vertigo*/
+	COVID or the flu.*/
 		
 	
 	}
@@ -98,11 +98,12 @@ img, object{
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Vertigo or Stroke?</h1>
+	<h1>COVID-19 or Flu?</h1>
+	<!-- This is the header for every page on the top of the website--> 
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have vertigo but wonder if it is a stroke. Answer a few short questions to find out!</p>
+	<p>Are you feeling like you might have the infamouse COVID-19 or is it just the flu. Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
