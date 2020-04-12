@@ -52,8 +52,7 @@ It's not reliable because it's based on Google searched symptons and made by an 
 	var.resultText outputs that result on the results page. */
 	function results(){
 		var total= COVID_count + flu_count;
-		alert( "COVID-19 Percentage: " + (COVID_count / total) * 100 +
-		      "Flu Percentage:" + (flu_count / total) * 100);
+		alert( "COVID-19 Percentage: " + (COVID_count / total) * 100 + "Flu Percentage:" + (flu_count / total) * 100);
 	/* Put function for results() to calculate. var is variable in which I put the total COVID-19
 	and flu. I choose to put an alert to calulate my results. The titles of the alert is COVID-19
 	Percentage and Flu Percentage which is the COVID count and flu count over the total number of 
@@ -125,7 +124,7 @@ img, object{
 	<!-- This is a divider between each set of words-->
 	
     	<div id="content" class="w3-container">
-        <p>Do you feel a sudden numbness?.</p> 
+        <p>Do you have shortness of breath?.</p> 
 	<!-- Yes or No button that it added to the total count for both COVID-19 and Flu. 
 	The href statement says to go to the next id which is two. If they click Yes it will
 	go to stroke add"-->
@@ -144,7 +143,7 @@ img, object{
 	<div id="content" class="w3-container">
 	<p>Do you feel confused all of a sudden?.</p>
 	<!-- For the href statement make sure to put which page you want next. If they say yes
-	then the answer will be added to the strokeAdd counter-->
+	then the answer will be added to the COVIDAdd counter-->
 	<a href="#three"  onclick="COVIDAdd();" class="w3-btn w3-black">Yes</a>
 	<a href="#three"  onclick="fluAdd();" class="w3-btn w3-black">No</a>
 	</div>
@@ -183,8 +182,8 @@ img, object{
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Do you have trouble speaking?.</p>
-	<!-- Extra question added which is my extra stroke question-->
+	<p>Have your symptons lasted longer than two weeks?.</p>
+	<!-- Extra question added which is my extra COVID question-->
 	<a href="#six"  onclick="COVIDAdd();" class="w3-btn w3-black"> Yes</a>
         <a href="#six"  onclick="fluAdd();" class="w3-btn w3-black">No</a>
 	</div>
