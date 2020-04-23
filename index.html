@@ -133,9 +133,9 @@ img, object{
 	
     	<div id="content" class="w3-container">
         <p>Do you have shortness of breath?.</p> 
-	<!-- Yes or No button that it added to the total count for both COVID-19 and Flu. 
+	<!-- Yes or No button that it added to the total count for both COVID-19, flu, cold, or allergies. 
 	The href statement says to go to the next id which is two. If they click Yes it will
-	go to COVID add"-->
+	go to COVID add. If they click no, then it go to the flu, cold, and allergies add count"-->
 	<a href="#two"  onclick="COVIDAdd();" class="w3-btn w3-black"> Yes</a>
         <a href="#two"  onclick="fluAdd() + coldAdd() + allergiesAdd();" class="w3-btn w3-black">No</a>
 	</div>
@@ -149,11 +149,11 @@ img, object{
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Do you feel persistent pain or pressure in the chest?.</p>
-	<!-- For the href statement make sure to put which page you want next. If they say yes
-	then the answer will be added to the COVIDAdd counter-->
-	<a href="#three"  onclick="COVIDAdd();" class="w3-btn w3-black">Yes</a>
-	<a href="#three"  onclick="fluAdd() + coldAdd();" class="w3-btn w3-black">No</a>
+	<p>Do you have a cough?.</p>
+	<!-- For the href statement make sure to put which page you want next. If they say no
+	then the answer will be added to the allergiesAdd counter-->
+	<a href="#three"  onclick="COVIDAdd() + fluAdd() + coldAdd();" class="w3-btn w3-black">Yes</a>
+	<a href="#three"  onclick="allergiesAdd();" class="w3-btn w3-black">No</a>
 	</div>
 	
 </div>	
@@ -190,10 +190,11 @@ img, object{
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Have your symptons lasted longer than two weeks?.</p>
-	<!-- Extra question added which is my extra COVID question-->
-	<a href="#six"  onclick="COVIDAdd()+ allegriesAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#six"  onclick="fluAdd() + coldAdd();" class="w3-btn w3-black">No</a>
+	<p>How long have your symptons been going on?.</p>
+	<!-- Extra question added which is where im using 3 different buttons represernting different times-->
+	<a href="#six"  onclick="fluAdd()+ coldAdd();" class="w3-btn w3-black"> 1-2 Weeks</a>
+        <a href="#six"  onclick="COVIDadd();" class="w3-btn w3-black">1-3 Weeks</a>
+	<a href="#six"  onclick="allergiesAdd();" class="w3-btn w3-black">Several Weeks</a>
 	</div>
 		
 </div>
@@ -205,14 +206,56 @@ img, object{
 	
 	<div id="content" class="w3-container">
 	<p>Do you have headaches?.</p>
-	<!-- This is an extra question for flu symptons-->
+	<!-- This is a question where i didnt add COVID or alergies, bc it was only present sometimes-->
 	</div>
 	<a href="#seven"  onclick="fluAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#seven"  onclick="COVIDAdd() + coldAdd();" class="w3-btn w3-black">No</a>
+        <a href="#seven"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	
+</div>
+
+<div class="page" id="seven">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 7</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Do you have a fever?.</p>
+	<!-- This is an easy question to adk bc it elminates allergies pretty quickly-->
+	</div>
+	<a href="#eight"  onclick="fluAdd() + COVIDAdd() + coldAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#eight"  onclick="allergiesAdd();" class="w3-btn w3-black">No</a>
 	
 </div>
 	
-<div class="page" id="seven">
+<div class="page" id="eight">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 8</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Are you sneezing?.</p>
+	<!-- This question was probably the most definitive-->
+	</div>
+	<a href="#nine"  onclick="fluAdd() + COVIDAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#nine"  onclick="allergiesAdd() + coldAdd();" class="w3-btn w3-black">No</a>
+	
+</div>
+	
+<div class="page" id="nine">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 9</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Do you have diarrhea?.</p>
+	<!-- This question was probably the most definitive-->
+	</div>
+	<a href="#ten"  onclick="fluAdd() + COVIDAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#ten"  onclick="allergiesAdd() + coldAdd();" class="w3-btn w3-black">No</a>
+	
+</div>
+	
+<div class="page" id="eight">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>End of Questions</h1>
 	</div>
