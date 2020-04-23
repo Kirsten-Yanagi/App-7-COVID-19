@@ -16,7 +16,7 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-To diagnose a person on whether they have COVID 19, a cold, allegries, or the flu.
+To diagnose a person on whether they have COVID 19, a cold, allergies, or the flu.
  
 Known Issues:
 It's not reliable because it's based on Google searched symptons and made by an unqualified health professional
@@ -32,11 +32,11 @@ It's not reliable because it's based on Google searched symptons and made by an 
 
 
 <script>
-	// Add each variable for the sympton. In this case for COVID-19, flu, cold, or allegreis to keep count of each sympton
+	// Add each variable for the sympton. In this case for COVID-19, flu, cold, or allergeis to keep count of each sympton
         var COVID_count = 0;
         var flu_count = 0;
 	var cold_count = 0;
-	var allegries_count = 0; 
+	var allergies_count = 0; 
 
 	// This function adds a value of 1 to the COVID value everytime they hit an COVID sympton.
         function COVIDAdd(){
@@ -51,20 +51,19 @@ It's not reliable because it's based on Google searched symptons and made by an 
         function coldAdd(){
             cold_count = cold_count + 1;
 	}
-	// This function adds a value of 1 to the allegries value everytime they hit an allegry sympton.
-        function allegriesAdd(){
-            allegries_count = allegries_count + 1;
+	// This function adds a value of 1 to the allegries value everytime they hit an allergy sympton.
+        function allergiesAdd(){
+            allergies_count = allergies_count + 1;
 	}
 	/* This function produces the percent chance of have COVID-19, cold, flu, or allegries.
 	var.resultText outputs that result on the results page. */
 	function results(){
 		var total= COVID_count + flu_count + cold_count + allegries_count;
-		alert( "COVID-19 Percentage: " + (COVID_count / total) * 100 );
-		alert( "Flu Percentage:" + (flu_count / total) * 100 +
-		     "Cold Percentage:" + (cold_count / total) * 100 + "Allergies Percentage:" + (allegries_count / total) * 100);
+		alert( "COVID-19 Percentage: " + (COVID_count / total) * 100 + "Flu Percentage:" + (flu_count / total) * 100 +
+		     "Cold Percentage:" + (cold_count / total) * 100 + "Allergies Percentage:" + (allergies_count / total) * 100);
 	/* Put function for results() to calculate. var is variable in which I put the total COVID-19,
 	cold, allegries, or flu. I choose to put an alert to calulate my results. The titles of the alert is COVID-19
-	Percentage, Cold percentage, Allegries Percentage and Flu Percentage which is the COVID count, flu count, cold count, allegries
+	Percentage, Cold percentage, Allergies Percentage and Flu Percentage which is the COVID count, flu count, cold count, allegries
 	count over the total number of questions. Mutilply each fraction by 100 to get an accurate percentage of whether the viewer has 
 	COVID, a cold, allegries, or the flu.*/
 		
@@ -106,12 +105,12 @@ img, object{
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>COVID-19 or Flu?</h1>
+	<h1>COVID-19, Cold, Allergies, or the Flu?</h1>
 	<!-- This is the header for every page on the top of the website--> 
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have the infamous COVID-19 or it might be a Cold, Allegries, or the Flu. Answer a few short questions to find out!</p>
+	<p>Are you feeling like you might have the infamous COVID-19 or it might be a Cold, Allergies, or the Flu. Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
@@ -166,7 +165,7 @@ img, object{
 	
 	<div id="content" class="w3-container">
 	<p>Do you have a runny or stuffy nose?.</p>
-	<a href="#four"  onclick="fluAdd() + coldAdd();" class="w3-btn w3-black"> Yes</a>
+	<a href="#four"  onclick="fluAdd() + coldAdd() + allergiesAdd();" class="w3-btn w3-black"> Yes</a>
 	<a href="#four"  onclick="COVIDAdd();" class="w3-btn w3-black">No</a>
 	</div>
 	
@@ -180,7 +179,7 @@ img, object{
 	<div id="content" class="w3-container">
 	<p>Do you have body aches and pains?.</p>
 	<a href="#five"  onclick="fluAdd() + coldAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#five"  onclick="COVIDAdd();" class="w3-btn w3-black">No</a>
+        <a href="#five"  onclick="COVIDAdd() + allergiesAdd();" class="w3-btn w3-black">No</a>
 	</div>
 
 </div>
@@ -193,7 +192,7 @@ img, object{
 	<div id="content" class="w3-container">
 	<p>Have your symptons lasted longer than two weeks?.</p>
 	<!-- Extra question added which is my extra COVID question-->
-	<a href="#six"  onclick="COVIDAdd();" class="w3-btn w3-black"> Yes</a>
+	<a href="#six"  onclick="COVIDAdd()+ allegriesAdd();" class="w3-btn w3-black"> Yes</a>
         <a href="#six"  onclick="fluAdd() + coldAdd();" class="w3-btn w3-black">No</a>
 	</div>
 		
