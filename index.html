@@ -32,32 +32,40 @@ It's not reliable because it's based on Google searched symptons and made by an 
 
 
 <script>
-	// Add each variable for the sympton. In this case for COVID-19 or the flu to keep count of each sympton
+	// Add each variable for the sympton. In this case for COVID-19, flu, cold, or allegreis to keep count of each sympton
         var COVID_count = 0;
         var flu_count = 0;
+	var cold_count=0
+	var allegries=0
 
 	// This function adds a value of 1 to the COVID value everytime they hit an COVID sympton.
         function COVIDAdd(){
-            COVID_count = COVID_count + 1;
-		
-
+            COVID_count = COVID_count + 1;	
         }
 	
 	// This function adds a value of 1 to the flu value everytime they hit a flu sympton.
         function fluAdd(){
             flu_count = flu_count + 1;	
 	}
-	
-	/* This function produces the percent chance of have COVID-19 or the flu.
+	// This function adds a value of 1 to the cold value everytime they hit an cold sympton.
+        function coldAdd(){
+            cold_count = cold_count + 1;
+	}
+	// This function adds a value of 1 to the allegries value everytime they hit an allegry sympton.
+        function allegriesAdd(){
+            allegries_count = allegries_count + 1;
+	}
+	/* This function produces the percent chance of have COVID-19, cold, flu, or allegries.
 	var.resultText outputs that result on the results page. */
 	function results(){
-		var total= COVID_count + flu_count;
-		alert( "COVID-19 Percentage: " + (COVID_count / total) * 100 + "Flu Percentage:" + (flu_count / total) * 100);
-	/* Put function for results() to calculate. var is variable in which I put the total COVID-19
-	and flu. I choose to put an alert to calulate my results. The titles of the alert is COVID-19
-	Percentage and Flu Percentage which is the COVID count and flu count over the total number of 
-	questions. Mutilply each fraction by 100 to get an accurate percentage of whether the viewer has 
-	COVID or the flu.*/
+		var total= COVID_count + flu_count + cold_count + allegries_count;
+		alert( "COVID-19 Percentage: " + (COVID_count / total) * 100 + "Flu Percentage:" + (flu_count / total) * 100 +
+		     "Cold Percentage:" + (cold_count/ total) * 100 + "Allergies Percentage:" + (allegries_count/ total) * 100);
+	/* Put function for results() to calculate. var is variable in which I put the total COVID-19,
+	cold, allegries, or flu. I choose to put an alert to calulate my results. The titles of the alert is COVID-19
+	Percentage, Cold percentage, Allegries Percentage and Flu Percentage which is the COVID count, flu count, cold count, allegries
+	count over the total number of questions. Mutilply each fraction by 100 to get an accurate percentage of whether the viewer has 
+	COVID, a cold, allegries, or the flu.*/
 		
 	
 	}
