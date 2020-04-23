@@ -153,7 +153,7 @@ img, object{
 	<!-- For the href statement make sure to put which page you want next. If they say yes
 	then the answer will be added to the COVIDAdd counter-->
 	<a href="#three"  onclick="COVIDAdd();" class="w3-btn w3-black">Yes</a>
-	<a href="#three"  onclick="fluAdd();" onclick= "coldAdd();" class="w3-btn w3-black">No</a>
+	<a href="#three"  onclick="fluAdd() + coldAdd();" class="w3-btn w3-black">No</a>
 	</div>
 	
 </div>	
@@ -165,7 +165,7 @@ img, object{
 	
 	<div id="content" class="w3-container">
 	<p>Do you have a runny or stuffy nose?.</p>
-	<a href="#four"  onclick="fluAdd()" onclick= "coldAdd();" class="w3-btn w3-black"> Yes</a>
+	<a href="#four"  onclick="fluAdd() + coldAdd();" class="w3-btn w3-black"> Yes</a>
 	<a href="#four"  onclick="COVIDAdd();" class="w3-btn w3-black">No</a>
 	</div>
 	
@@ -178,7 +178,7 @@ img, object{
 	
 	<div id="content" class="w3-container">
 	<p>Do you have body aches and pains?.</p>
-	<a href="#five"  onclick="fluAdd();" class="w3-btn w3-black"> Yes</a>
+	<a href="#five"  onclick="fluAdd() + coldAdd();" class="w3-btn w3-black"> Yes</a>
         <a href="#five"  onclick="COVIDAdd();" class="w3-btn w3-black">No</a>
 	</div>
 
@@ -193,7 +193,7 @@ img, object{
 	<p>Have your symptons lasted longer than two weeks?.</p>
 	<!-- Extra question added which is my extra COVID question-->
 	<a href="#six"  onclick="COVIDAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#six"  onclick="fluAdd();" class="w3-btn w3-black">No</a>
+        <a href="#six"  onclick="fluAdd() + coldAdd();" class="w3-btn w3-black">No</a>
 	</div>
 		
 </div>
@@ -208,7 +208,7 @@ img, object{
 	<!-- This is an extra question for flu symptons-->
 	</div>
 	<a href="#seven"  onclick="fluAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#seven"  onclick="COVIDAdd();" class="w3-btn w3-black">No</a>
+        <a href="#seven"  onclick="COVIDAdd() + coldAdd();" class="w3-btn w3-black">No</a>
 	
 </div>
 	
