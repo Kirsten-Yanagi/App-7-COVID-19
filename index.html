@@ -242,6 +242,35 @@ img, object{
 
 <div class="page" id="nine">
 	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 9</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Do you have diarrhea?.</p>
+	<!-- This question was probably the most definitive-->
+	</div>
+	<a href="#ten"  onclick="fluAdd() + COVIDAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#ten"  onclick="allergiesAdd() + coldAdd();" class="w3-btn w3-black">No</a>
+	
+</div>
+
+<div class="page" id="ten">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 10</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Do you have a sore throat?.</p>
+	<!-- This question was probably the most definitive-->
+	</div>
+	<a href="#eleven"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#eleven"  onclick="allergiesAdd() + coldAdd() + COVIDAdd();" class="w3-btn w3-black">No</a>
+	
+</div>
+
+
+<div class="page" id="eleven">
+	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>End of Questions</h1>
 	</div>
 	
@@ -253,7 +282,9 @@ img, object{
 	</div>
 	</div>
 </div>
-	
+
+
+
 <!-- This produces the footer of every page, "DIY!"-->
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
