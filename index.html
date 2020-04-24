@@ -141,9 +141,24 @@ img, object{
 	</div>
 
 </div>
+	<!-- Class tells you the page. id shows what page you are on-->
+	<div class="page" id="two">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 2</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Do you have a cough?.</p>
+	<!-- For the href statement make sure to put which page you want next. If they say no
+	then the answer will be added to the allergiesAdd counter-->
+	<a href="#three"  onclick="COVIDAdd() + fluAdd() + coldAdd();" class="w3-btn w3-black">Yes</a>
+	<a href="#three"  onclick="allergiesAdd();" class="w3-btn w3-black">No</a>
+	</div>
+	
+</div>	
 	
 	
-<div class="page" id="two">
+<div class="page" id="three">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>End of Questions</h1>
 	</div>
