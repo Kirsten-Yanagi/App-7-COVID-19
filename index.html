@@ -33,14 +33,14 @@ It's not reliable because it's based on Google searched symptons and made by an 
 
 <script>
 	// Add each variable for the sympton. In this case for COVID-19, flu, cold, or allergeis to keep count of each sympton
-        var COVID_count = 0
+        var covid_count = 0;
         var flu_count = 0;
 	var cold_count = 0;
 	var allergies_count = 0; 
 
 	// This function adds a value of 1 to the COVID value everytime they hit an COVID sympton.
         function COVIDAdd(){
-            COVID_count = COVID_count + 1;	
+            covid_count = covid_count + 1;	
         }
 	
 	// This function adds a value of 1 to the flu value everytime they hit a flu sympton.
@@ -58,8 +58,8 @@ It's not reliable because it's based on Google searched symptons and made by an 
 	/* This function produces the percent chance of have COVID-19, cold, flu, or allegries.
 	var.resultText outputs that result on the results page. */
 	function results(){
-		var total= COVID_count + flu_count + cold_count + allegries_count;
-		alert( "COVID-19 Percentage: " + (COVID_count / total) * 100 + "Flu Percentage:" + (flu_count / total) * 100 +
+		var total= covid_count + flu_count + cold_count + allegries_count;
+		alert( "COVID-19 Percentage: " + (covid_count / total) * 100 + "Flu Percentage:" + (flu_count / total) * 100 +
 		     "Cold Percentage:" + (cold_count / total) * 100 + "Allergies Percentage:" + (allergies_count / total) * 100);
 	/* Put function for results() to calculate. var is variable in which I put the total COVID-19,
 	cold, allegries, or flu. I choose to put an alert to calulate my results. The titles of the alert is COVID-19
