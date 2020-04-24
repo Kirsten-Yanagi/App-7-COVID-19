@@ -39,7 +39,7 @@ It's not reliable because it's based on Google searched symptons and made by an 
 	var allergies_count = 0; 
 
 	// This function adds a value of 1 to the COVID value everytime they hit an COVID sympton.
-        function COVIDAdd(){
+        function covidAdd(){
             covid_count = covid_count + 1;	
         }
 	
@@ -136,7 +136,7 @@ img, object{
 	<!-- Yes or No button that it added to the total count for both COVID-19, flu, cold, or allergies. 
 	The href statement says to go to the next id which is two. If they click Yes it will
 	go to COVID add. If they click no, then it go to the flu, cold, and allergies add count"-->
-	<a href="#two"  onclick= "COVIDAdd();" class="w3-btn w3-black">Yes</a>
+	<a href="#two"  onclick= "covidAdd();" class="w3-btn w3-black">Yes</a>
         <a href="#two"  onclick= "fluAdd() + coldAdd() + allergiesAdd();" class="w3-btn w3-black">No</a>
 	</div>
 
